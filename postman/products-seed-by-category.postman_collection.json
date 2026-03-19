@@ -1,0 +1,1696 @@
+{
+  "info": {
+    "_postman_id": "d205c8a1-8638-4db2-863f-b36d6f0c3f6d",
+    "name": "Products Seed By Category",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "60 create product requests grouped by category"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{authToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test(\"Status code is 201\", function () {",
+          "  pm.response.to.have.status(201);",
+          "});",
+          "const response = pm.response.json();",
+          "pm.test(\"Response message is Product added\", function () {",
+          "  pm.expect(response.message).to.eql(\"Product added\");",
+          "});",
+          "console.log(\"Seed request\", pm.info.requestName, \"status\", pm.response.code);"
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "Electronics",
+      "item": [
+        {
+          "name": "Electronics 01",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Smartphone 01 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Smart device 01", "type": "text" },
+                { "key": "description", "value": "High quality smartphone with balanced performance and battery life.", "type": "text" },
+                { "key": "price", "value": "399", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Smartphones", "type": "text" },
+                { "key": "stock", "value": "50", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "NovaTech", "type": "text" },
+                { "key": "color", "value": "Black", "type": "text" },
+                { "key": "material", "value": "Aluminum", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,smartphone", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 02",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Laptop 02 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Portable power 02", "type": "text" },
+                { "key": "description", "value": "Reliable laptop suitable for work, study, and media tasks.", "type": "text" },
+                { "key": "price", "value": "799", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Laptops", "type": "text" },
+                { "key": "stock", "value": "35", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "Aster", "type": "text" },
+                { "key": "color", "value": "Silver", "type": "text" },
+                { "key": "material", "value": "Plastic", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,laptop", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "8", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 03",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Headphones 03 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Wireless audio 03", "type": "text" },
+                { "key": "description", "value": "Comfortable over-ear headphones with clean and rich sound.", "type": "text" },
+                { "key": "price", "value": "129", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Headphones", "type": "text" },
+                { "key": "stock", "value": "70", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "SoundPeak", "type": "text" },
+                { "key": "color", "value": "White", "type": "text" },
+                { "key": "material", "value": "Polycarbonate", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,headphones", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "10", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 04",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Smartwatch 04 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Fitness watch 04", "type": "text" },
+                { "key": "description", "value": "Smartwatch with health tracking, notifications, and GPS support.", "type": "text" },
+                { "key": "price", "value": "199", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Smartwatches", "type": "text" },
+                { "key": "stock", "value": "45", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "PulseLine", "type": "text" },
+                { "key": "color", "value": "Gray", "type": "text" },
+                { "key": "material", "value": "Silicone", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,smartwatch", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 05",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Camera 05 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Digital camera 05", "type": "text" },
+                { "key": "description", "value": "Compact camera for everyday photography and travel moments.", "type": "text" },
+                { "key": "price", "value": "549", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Cameras", "type": "text" },
+                { "key": "stock", "value": "25", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "Photonix", "type": "text" },
+                { "key": "color", "value": "Black", "type": "text" },
+                { "key": "material", "value": "Magnesium", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,camera", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "12", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 06",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Tablet 06 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Light tablet 06", "type": "text" },
+                { "key": "description", "value": "Portable tablet for reading, browsing, and streaming.", "type": "text" },
+                { "key": "price", "value": "349", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Tablets", "type": "text" },
+                { "key": "stock", "value": "60", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "CorePad", "type": "text" },
+                { "key": "color", "value": "Blue", "type": "text" },
+                { "key": "material", "value": "Aluminum", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,tablet", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 07",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Monitor 07 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Wide display 07", "type": "text" },
+                { "key": "description", "value": "High resolution monitor suitable for office and creative tasks.", "type": "text" },
+                { "key": "price", "value": "279", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Monitors", "type": "text" },
+                { "key": "stock", "value": "40", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "VisionPro", "type": "text" },
+                { "key": "color", "value": "Black", "type": "text" },
+                { "key": "material", "value": "Plastic", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,monitor", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "4", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 08",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Speaker 08 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Portable sound 08", "type": "text" },
+                { "key": "description", "value": "Compact speaker with clear sound and long battery backup.", "type": "text" },
+                { "key": "price", "value": "89", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Audio", "type": "text" },
+                { "key": "stock", "value": "90", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "Boomify", "type": "text" },
+                { "key": "color", "value": "Red", "type": "text" },
+                { "key": "material", "value": "Rubber", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,speaker", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "9", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 09",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Console 09 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Gaming gear 09", "type": "text" },
+                { "key": "description", "value": "Modern game console with smooth performance and fast loading.", "type": "text" },
+                { "key": "price", "value": "499", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Gaming", "type": "text" },
+                { "key": "stock", "value": "30", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "PlayNet", "type": "text" },
+                { "key": "color", "value": "White", "type": "text" },
+                { "key": "material", "value": "Plastic", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,gaming", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "3", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Electronics 10",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Electronics Accessory 10 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Tech kit 10", "type": "text" },
+                { "key": "description", "value": "Useful electronics accessory set for home and office setup.", "type": "text" },
+                { "key": "price", "value": "49", "type": "text" },
+                { "key": "category", "value": "Electronics", "type": "text" },
+                { "key": "subCategory", "value": "Accessories", "type": "text" },
+                { "key": "stock", "value": "120", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "Plugix", "type": "text" },
+                { "key": "color", "value": "Gray", "type": "text" },
+                { "key": "material", "value": "Mixed", "type": "text" },
+                { "key": "tags", "value": "seed,electronics,accessory", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "11", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Clothing",
+      "item": [
+        {
+          "name": "Clothing 01",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing TShirt 01 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Cotton fit 01", "type": "text" },
+                { "key": "description", "value": "Soft cotton t-shirt for daily wear with breathable fabric.", "type": "text" },
+                { "key": "price", "value": "19", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "TShirts", "type": "text" },
+                { "key": "stock", "value": "140", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "UrbanWeave", "type": "text" },
+                { "key": "color", "value": "Navy", "type": "text" },
+                { "key": "material", "value": "Cotton", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,tshirt", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 02",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Jeans 02 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Denim style 02", "type": "text" },
+                { "key": "description", "value": "Classic straight-fit jeans with durable stitched seams.", "type": "text" },
+                { "key": "price", "value": "49", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Jeans", "type": "text" },
+                { "key": "stock", "value": "80", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "BlueLane", "type": "text" },
+                { "key": "color", "value": "Indigo", "type": "text" },
+                { "key": "material", "value": "Denim", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,jeans", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 03",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Jacket 03 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Warm layer 03", "type": "text" },
+                { "key": "description", "value": "Lightweight jacket designed for wind protection and comfort.", "type": "text" },
+                { "key": "price", "value": "89", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Jackets", "type": "text" },
+                { "key": "stock", "value": "65", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "NorthEdge", "type": "text" },
+                { "key": "color", "value": "Olive", "type": "text" },
+                { "key": "material", "value": "Polyester", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,jacket", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "10", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 04",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Sneakers 04 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Street move 04", "type": "text" },
+                { "key": "description", "value": "Everyday sneakers with soft sole and modern silhouette.", "type": "text" },
+                { "key": "price", "value": "69", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Sneakers", "type": "text" },
+                { "key": "stock", "value": "95", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "StrideWay", "type": "text" },
+                { "key": "color", "value": "White", "type": "text" },
+                { "key": "material", "value": "Mesh", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,sneakers", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "9", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 05",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Dress 05 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Casual flow 05", "type": "text" },
+                { "key": "description", "value": "Elegant casual dress with smooth texture and clean finish.", "type": "text" },
+                { "key": "price", "value": "59", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Dresses", "type": "text" },
+                { "key": "stock", "value": "55", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "LunaWear", "type": "text" },
+                { "key": "color", "value": "Beige", "type": "text" },
+                { "key": "material", "value": "Viscose", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,dress", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 06",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Hoodie 06 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Cozy fit 06", "type": "text" },
+                { "key": "description", "value": "Comfort hoodie with warm fleece lining and front pocket.", "type": "text" },
+                { "key": "price", "value": "45", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Hoodies", "type": "text" },
+                { "key": "stock", "value": "85", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "CloudFit", "type": "text" },
+                { "key": "color", "value": "Gray", "type": "text" },
+                { "key": "material", "value": "Cotton Blend", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,hoodie", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "8", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 07",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Shirt 07 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Formal look 07", "type": "text" },
+                { "key": "description", "value": "Crisp shirt for office style with comfortable regular fit.", "type": "text" },
+                { "key": "price", "value": "39", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Shirts", "type": "text" },
+                { "key": "stock", "value": "75", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "OfficeLine", "type": "text" },
+                { "key": "color", "value": "Blue", "type": "text" },
+                { "key": "material", "value": "Cotton", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,shirt", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "4", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 08",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Shorts 08 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Summer fit 08", "type": "text" },
+                { "key": "description", "value": "Breathable shorts for warm weather and daily activity.", "type": "text" },
+                { "key": "price", "value": "29", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Shorts", "type": "text" },
+                { "key": "stock", "value": "100", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "BreezeOn", "type": "text" },
+                { "key": "color", "value": "Khaki", "type": "text" },
+                { "key": "material", "value": "Cotton", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,shorts", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 09",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Activewear 09 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Sport set 09", "type": "text" },
+                { "key": "description", "value": "Flexible activewear for training with moisture control fabric.", "type": "text" },
+                { "key": "price", "value": "54", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Activewear", "type": "text" },
+                { "key": "stock", "value": "68", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "MoveCore", "type": "text" },
+                { "key": "color", "value": "Black", "type": "text" },
+                { "key": "material", "value": "Spandex", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,activewear", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Clothing 10",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Clothing Outerwear 10 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Cold shield 10", "type": "text" },
+                { "key": "description", "value": "Durable outerwear layer for cold and windy weather.", "type": "text" },
+                { "key": "price", "value": "119", "type": "text" },
+                { "key": "category", "value": "Clothing", "type": "text" },
+                { "key": "subCategory", "value": "Outerwear", "type": "text" },
+                { "key": "stock", "value": "42", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "StormPath", "type": "text" },
+                { "key": "color", "value": "Charcoal", "type": "text" },
+                { "key": "material", "value": "Nylon", "type": "text" },
+                { "key": "tags", "value": "seed,clothing,outerwear", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "12", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Beauty",
+      "item": [
+        {
+          "name": "Beauty 01",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty Skincare 01 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Face care 01", "type": "text" },
+                { "key": "description", "value": "Daily skincare product with hydrating and gentle formula.", "type": "text" },
+                { "key": "price", "value": "24", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "Skincare", "type": "text" },
+                { "key": "stock", "value": "110", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "PureGlow", "type": "text" },
+                { "key": "color", "value": "Transparent", "type": "text" },
+                { "key": "material", "value": "Gel", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,skincare", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 02",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty Makeup 02 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Daily glam 02", "type": "text" },
+                { "key": "description", "value": "Makeup item with long-lasting texture and smooth blending.", "type": "text" },
+                { "key": "price", "value": "18", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "Makeup", "type": "text" },
+                { "key": "stock", "value": "130", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "ColorNest", "type": "text" },
+                { "key": "color", "value": "Rose", "type": "text" },
+                { "key": "material", "value": "Cream", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,makeup", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "8", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 03",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty Haircare 03 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Hair boost 03", "type": "text" },
+                { "key": "description", "value": "Haircare formula designed for shine, softness, and moisture.", "type": "text" },
+                { "key": "price", "value": "22", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "Haircare", "type": "text" },
+                { "key": "stock", "value": "90", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "SilkRoot", "type": "text" },
+                { "key": "color", "value": "Amber", "type": "text" },
+                { "key": "material", "value": "Liquid", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,haircare", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 04",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty Fragrance 04 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Fresh scent 04", "type": "text" },
+                { "key": "description", "value": "Long-lasting fragrance with balanced floral and woody tones.", "type": "text" },
+                { "key": "price", "value": "44", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "Fragrance", "type": "text" },
+                { "key": "stock", "value": "75", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "AromaLine", "type": "text" },
+                { "key": "color", "value": "Clear", "type": "text" },
+                { "key": "material", "value": "Spray", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,fragrance", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "9", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 05",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty NailCare 05 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Nail set 05", "type": "text" },
+                { "key": "description", "value": "Nail care product with smooth finish and easy application.", "type": "text" },
+                { "key": "price", "value": "15", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "NailCare", "type": "text" },
+                { "key": "stock", "value": "145", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "GlossMint", "type": "text" },
+                { "key": "color", "value": "Pink", "type": "text" },
+                { "key": "material", "value": "Lacquer", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,nailcare", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "4", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 06",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty BodyCare 06 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Body care 06", "type": "text" },
+                { "key": "description", "value": "Body care item focused on hydration and skin comfort.", "type": "text" },
+                { "key": "price", "value": "21", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "BodyCare", "type": "text" },
+                { "key": "stock", "value": "98", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "SkinField", "type": "text" },
+                { "key": "color", "value": "Ivory", "type": "text" },
+                { "key": "material", "value": "Lotion", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,bodycare", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 07",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty Tool 07 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Beauty tool 07", "type": "text" },
+                { "key": "description", "value": "Beauty accessory tool for precise and comfortable use.", "type": "text" },
+                { "key": "price", "value": "17", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "Tools", "type": "text" },
+                { "key": "stock", "value": "112", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "FineTouch", "type": "text" },
+                { "key": "color", "value": "Black", "type": "text" },
+                { "key": "material", "value": "Steel", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,tool", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "3", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 08",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty MenGrooming 08 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Groom set 08", "type": "text" },
+                { "key": "description", "value": "Men grooming product for clean and easy routine.", "type": "text" },
+                { "key": "price", "value": "28", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "MenGrooming", "type": "text" },
+                { "key": "stock", "value": "88", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "SharpLine", "type": "text" },
+                { "key": "color", "value": "Graphite", "type": "text" },
+                { "key": "material", "value": "Foam", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,men-grooming", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 09",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty SunCare 09 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "UV shield 09", "type": "text" },
+                { "key": "description", "value": "Sun protection product with lightweight daily formula.", "type": "text" },
+                { "key": "price", "value": "26", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "SunCare", "type": "text" },
+                { "key": "stock", "value": "97", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "SunRoot", "type": "text" },
+                { "key": "color", "value": "Cream", "type": "text" },
+                { "key": "material", "value": "Lotion", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,suncare", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Beauty 10",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Beauty Set 10 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Care bundle 10", "type": "text" },
+                { "key": "description", "value": "Beauty care set bundle for complete routine coverage.", "type": "text" },
+                { "key": "price", "value": "59", "type": "text" },
+                { "key": "category", "value": "Beauty", "type": "text" },
+                { "key": "subCategory", "value": "Sets", "type": "text" },
+                { "key": "stock", "value": "72", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "GlowPack", "type": "text" },
+                { "key": "color", "value": "Mixed", "type": "text" },
+                { "key": "material", "value": "Mixed", "type": "text" },
+                { "key": "tags", "value": "seed,beauty,set", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "11", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Books 01",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books Fiction 01 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Novel read 01", "type": "text" },
+                { "key": "description", "value": "Engaging fiction book with immersive storytelling.", "type": "text" },
+                { "key": "price", "value": "14", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "Fiction", "type": "text" },
+                { "key": "stock", "value": "120", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "PageHouse", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,fiction", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 02",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books NonFiction 02 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Knowledge 02", "type": "text" },
+                { "key": "description", "value": "Nonfiction title with practical insights and examples.", "type": "text" },
+                { "key": "price", "value": "16", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "NonFiction", "type": "text" },
+                { "key": "stock", "value": "102", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "PageHouse", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,nonfiction", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 03",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books Science 03 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Science read 03", "type": "text" },
+                { "key": "description", "value": "Science-focused publication with clear structured content.", "type": "text" },
+                { "key": "price", "value": "18", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "Science", "type": "text" },
+                { "key": "stock", "value": "80", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "LearnGrid", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,science", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "4", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 04",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books History 04 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Past events 04", "type": "text" },
+                { "key": "description", "value": "History title covering key periods and important facts.", "type": "text" },
+                { "key": "price", "value": "17", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "History", "type": "text" },
+                { "key": "stock", "value": "76", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "ChronicleLab", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,history", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 05",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books Business 05 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Business 05", "type": "text" },
+                { "key": "description", "value": "Business guide with strategic frameworks and case studies.", "type": "text" },
+                { "key": "price", "value": "21", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "Business", "type": "text" },
+                { "key": "stock", "value": "64", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "GrowthShelf", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,business", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 06",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books SelfHelp 06 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Growth 06", "type": "text" },
+                { "key": "description", "value": "Self-help title focused on productivity and wellbeing.", "type": "text" },
+                { "key": "price", "value": "19", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "SelfHelp", "type": "text" },
+                { "key": "stock", "value": "88", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "MindRoute", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,selfhelp", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 07",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books Programming 07 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Code deep 07", "type": "text" },
+                { "key": "description", "value": "Programming book with practical examples and concepts.", "type": "text" },
+                { "key": "price", "value": "29", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "Programming", "type": "text" },
+                { "key": "stock", "value": "58", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "CodePress", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,programming", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "8", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 08",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books Kids 08 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Kids read 08", "type": "text" },
+                { "key": "description", "value": "Children book with colorful pages and simple narrative.", "type": "text" },
+                { "key": "price", "value": "12", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "Kids", "type": "text" },
+                { "key": "stock", "value": "130", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "StoryLeaf", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,kids", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "4", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 09",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books Comics 09 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Comic line 09", "type": "text" },
+                { "key": "description", "value": "Comic edition with vivid art and dynamic storyline.", "type": "text" },
+                { "key": "price", "value": "13", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "Comics", "type": "text" },
+                { "key": "stock", "value": "96", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "FrameBooks", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,comics", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Books 10",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Books Art 10 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Art look 10", "type": "text" },
+                { "key": "description", "value": "Art collection title with curated visual references.", "type": "text" },
+                { "key": "price", "value": "25", "type": "text" },
+                { "key": "category", "value": "Books", "type": "text" },
+                { "key": "subCategory", "value": "Art", "type": "text" },
+                { "key": "stock", "value": "52", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "CanvasRead", "type": "text" },
+                { "key": "color", "value": "Multicolor", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,books,art", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Furniture",
+      "item": [
+        {
+          "name": "Furniture 01",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Chair 01 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Seat comfort 01", "type": "text" },
+                { "key": "description", "value": "Ergonomic chair suitable for long daily use.", "type": "text" },
+                { "key": "price", "value": "79", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Chairs", "type": "text" },
+                { "key": "stock", "value": "44", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "HomeAxis", "type": "text" },
+                { "key": "color", "value": "Walnut", "type": "text" },
+                { "key": "material", "value": "Wood", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,chair", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "8", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 02",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Table 02 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Dining top 02", "type": "text" },
+                { "key": "description", "value": "Functional table with sturdy legs and smooth finish.", "type": "text" },
+                { "key": "price", "value": "139", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Tables", "type": "text" },
+                { "key": "stock", "value": "30", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "HomeAxis", "type": "text" },
+                { "key": "color", "value": "Oak", "type": "text" },
+                { "key": "material", "value": "Wood", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,table", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "9", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 03",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Sofa 03 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Living set 03", "type": "text" },
+                { "key": "description", "value": "Comfortable sofa with supportive cushions and durable frame.", "type": "text" },
+                { "key": "price", "value": "399", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Sofas", "type": "text" },
+                { "key": "stock", "value": "18", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "RelaxLine", "type": "text" },
+                { "key": "color", "value": "Gray", "type": "text" },
+                { "key": "material", "value": "Fabric", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,sofa", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "12", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 04",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Bed 04 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Sleep base 04", "type": "text" },
+                { "key": "description", "value": "Strong bed frame designed for stability and comfort.", "type": "text" },
+                { "key": "price", "value": "459", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Beds", "type": "text" },
+                { "key": "stock", "value": "14", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "SleepCraft", "type": "text" },
+                { "key": "color", "value": "Natural", "type": "text" },
+                { "key": "material", "value": "Wood", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,bed", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "10", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 05",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Storage 05 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Space saver 05", "type": "text" },
+                { "key": "description", "value": "Storage unit that keeps home essentials well organized.", "type": "text" },
+                { "key": "price", "value": "99", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Storage", "type": "text" },
+                { "key": "stock", "value": "39", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "StackHome", "type": "text" },
+                { "key": "color", "value": "White", "type": "text" },
+                { "key": "material", "value": "Engineered Wood", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,storage", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 06",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Office 06 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Work setup 06", "type": "text" },
+                { "key": "description", "value": "Office furniture unit for productive home workspace.", "type": "text" },
+                { "key": "price", "value": "189", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Office", "type": "text" },
+                { "key": "stock", "value": "26", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "DeskCore", "type": "text" },
+                { "key": "color", "value": "Black", "type": "text" },
+                { "key": "material", "value": "Metal", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,office", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "8", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 07",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Lighting 07 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Room light 07", "type": "text" },
+                { "key": "description", "value": "Lighting piece providing warm and efficient illumination.", "type": "text" },
+                { "key": "price", "value": "59", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Lighting", "type": "text" },
+                { "key": "stock", "value": "52", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "LumaNest", "type": "text" },
+                { "key": "color", "value": "Gold", "type": "text" },
+                { "key": "material", "value": "Metal", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,lighting", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 08",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Decor 08 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Home style 08", "type": "text" },
+                { "key": "description", "value": "Decorative furniture piece to enhance room aesthetics.", "type": "text" },
+                { "key": "price", "value": "47", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Decor", "type": "text" },
+                { "key": "stock", "value": "58", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "StyleLoft", "type": "text" },
+                { "key": "color", "value": "Cream", "type": "text" },
+                { "key": "material", "value": "Ceramic", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,decor", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 09",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Outdoor 09 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Patio set 09", "type": "text" },
+                { "key": "description", "value": "Outdoor furniture product made for weather resistance.", "type": "text" },
+                { "key": "price", "value": "149", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Outdoor", "type": "text" },
+                { "key": "stock", "value": "21", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "PatioFlow", "type": "text" },
+                { "key": "color", "value": "Brown", "type": "text" },
+                { "key": "material", "value": "Rattan", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,outdoor", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "9", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Furniture 10",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Furniture Kitchen 10 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Kitchen base 10", "type": "text" },
+                { "key": "description", "value": "Kitchen furniture element for practical storage and usage.", "type": "text" },
+                { "key": "price", "value": "119", "type": "text" },
+                { "key": "category", "value": "Furniture", "type": "text" },
+                { "key": "subCategory", "value": "Kitchen", "type": "text" },
+                { "key": "stock", "value": "29", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "CookSpace", "type": "text" },
+                { "key": "color", "value": "White", "type": "text" },
+                { "key": "material", "value": "MDF", "type": "text" },
+                { "key": "tags", "value": "seed,furniture,kitchen", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Other",
+      "item": [
+        {
+          "name": "Other 01",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other PetSupplies 01 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Pet care 01", "type": "text" },
+                { "key": "description", "value": "Pet supplies product designed for comfort and hygiene.", "type": "text" },
+                { "key": "price", "value": "27", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "PetSupplies", "type": "text" },
+                { "key": "stock", "value": "73", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "PetNest", "type": "text" },
+                { "key": "color", "value": "Mixed", "type": "text" },
+                { "key": "material", "value": "Mixed", "type": "text" },
+                { "key": "tags", "value": "seed,other,pet-supplies", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 02",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Toys 02 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Play set 02", "type": "text" },
+                { "key": "description", "value": "Toy item that supports fun and safe play sessions.", "type": "text" },
+                { "key": "price", "value": "23", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Toys", "type": "text" },
+                { "key": "stock", "value": "108", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "FunBox", "type": "text" },
+                { "key": "color", "value": "Mixed", "type": "text" },
+                { "key": "material", "value": "Plastic", "type": "text" },
+                { "key": "tags", "value": "seed,other,toys", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 03",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Sports 03 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Sport gear 03", "type": "text" },
+                { "key": "description", "value": "Sports item made for regular training and durability.", "type": "text" },
+                { "key": "price", "value": "35", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Sports", "type": "text" },
+                { "key": "stock", "value": "67", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "ActiveKit", "type": "text" },
+                { "key": "color", "value": "Blue", "type": "text" },
+                { "key": "material", "value": "Rubber", "type": "text" },
+                { "key": "tags", "value": "seed,other,sports", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 04",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Garden 04 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Garden tool 04", "type": "text" },
+                { "key": "description", "value": "Garden product for maintenance and outdoor care.", "type": "text" },
+                { "key": "price", "value": "31", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Garden", "type": "text" },
+                { "key": "stock", "value": "54", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "GreenLine", "type": "text" },
+                { "key": "color", "value": "Green", "type": "text" },
+                { "key": "material", "value": "Metal", "type": "text" },
+                { "key": "tags", "value": "seed,other,garden", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 05",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Automotive 05 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Car kit 05", "type": "text" },
+                { "key": "description", "value": "Automotive accessory for maintenance and daily use.", "type": "text" },
+                { "key": "price", "value": "42", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Automotive", "type": "text" },
+                { "key": "stock", "value": "49", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "DriveOne", "type": "text" },
+                { "key": "color", "value": "Black", "type": "text" },
+                { "key": "material", "value": "Mixed", "type": "text" },
+                { "key": "tags", "value": "seed,other,automotive", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "8", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 06",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Music 06 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Music item 06", "type": "text" },
+                { "key": "description", "value": "Music accessory suitable for practice and performance.", "type": "text" },
+                { "key": "price", "value": "56", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Music", "type": "text" },
+                { "key": "stock", "value": "41", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "ToneCraft", "type": "text" },
+                { "key": "color", "value": "Natural", "type": "text" },
+                { "key": "material", "value": "Wood", "type": "text" },
+                { "key": "tags", "value": "seed,other,music", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 07",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Health 07 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Health aid 07", "type": "text" },
+                { "key": "description", "value": "Health support product for routine care and comfort.", "type": "text" },
+                { "key": "price", "value": "33", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Health", "type": "text" },
+                { "key": "stock", "value": "62", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "WellNex", "type": "text" },
+                { "key": "color", "value": "White", "type": "text" },
+                { "key": "material", "value": "Mixed", "type": "text" },
+                { "key": "tags", "value": "seed,other,health", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "5", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 08",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Travel 08 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Travel kit 08", "type": "text" },
+                { "key": "description", "value": "Travel accessory for comfort and organization on the move.", "type": "text" },
+                { "key": "price", "value": "39", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Travel", "type": "text" },
+                { "key": "stock", "value": "57", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath2}}" },
+                { "key": "brand", "value": "MovePack", "type": "text" },
+                { "key": "color", "value": "Blue", "type": "text" },
+                { "key": "material", "value": "Nylon", "type": "text" },
+                { "key": "tags", "value": "seed,other,travel", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "7", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 09",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Stationery 09 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Desk set 09", "type": "text" },
+                { "key": "description", "value": "Stationery product for office and study tasks.", "type": "text" },
+                { "key": "price", "value": "14", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Stationery", "type": "text" },
+                { "key": "stock", "value": "150", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath3}}" },
+                { "key": "brand", "value": "NoteGrid", "type": "text" },
+                { "key": "color", "value": "Mixed", "type": "text" },
+                { "key": "material", "value": "Paper", "type": "text" },
+                { "key": "tags", "value": "seed,other,stationery", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "4", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        },
+        {
+          "name": "Other 10",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Other Crafts 10 {{$timestamp}}", "type": "text" },
+                { "key": "subtitle", "value": "Craft set 10", "type": "text" },
+                { "key": "description", "value": "Craft supplies item for hobby and creative projects.", "type": "text" },
+                { "key": "price", "value": "28", "type": "text" },
+                { "key": "category", "value": "Other", "type": "text" },
+                { "key": "subCategory", "value": "Crafts", "type": "text" },
+                { "key": "stock", "value": "84", "type": "text" },
+                { "key": "images", "type": "file", "src": "{{imagePath1}}" },
+                { "key": "brand", "value": "CraftHub", "type": "text" },
+                { "key": "color", "value": "Mixed", "type": "text" },
+                { "key": "material", "value": "Mixed", "type": "text" },
+                { "key": "tags", "value": "seed,other,crafts", "type": "text" },
+                { "key": "type", "value": "physical", "type": "text" },
+                { "key": "discount", "value": "6", "type": "text" }
+              ]
+            },
+            "url": "{{baseUrl}}/products/add/{{sellerId}}"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" },
+    { "key": "sellerId", "value": "" },
+    { "key": "authToken", "value": "" },
+    { "key": "imagePath1", "value": "" },
+    { "key": "imagePath2", "value": "" },
+    { "key": "imagePath3", "value": "" }
+  ]
+}
